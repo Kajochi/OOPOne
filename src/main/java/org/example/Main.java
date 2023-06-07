@@ -4,6 +4,9 @@ package org.example;
 import model.Students;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,21 +19,29 @@ public class Main {
         Students studentsix = new Students(006, "Tom");
         Students studentseven = new Students(007, "Ida");
 
-        Students [] students = {studentone, studenttwo, studentthree, studentffour, studentfive, studentsix};
 
-        StudentDB studentDB = new StudentDB(students);
+        StudentDB studentDB = new StudentDB();
 
+        studentDB.addStudent(studentone);
+        studentDB.addStudent(studenttwo);
+        studentDB.addStudent(studentthree);
+        studentDB.addStudent(studentffour);
+        studentDB.addStudent(studentfive);
+        studentDB.addStudent(studentsix);
         studentDB.addStudent(studentseven);
-       System.out.println(studentDB);
 
+
+        System.out.println(studentDB);
         Students studenteight = new Students(8, "Franz");
-        //studentDB.addStudent(studenteight);
-        //System.out.println(studentDB);
-        studentDB.removeStudent("Paula");
+        studentDB.addStudent(studenteight);
+        //System.out.println(students);
+       // studentDB.removeStudent("Paula");
 
         System.out.println(studentDB);
 
+        studentDB.removeStudent(studentffour);
 
+        System.out.println(studentDB);
 
 
     }
