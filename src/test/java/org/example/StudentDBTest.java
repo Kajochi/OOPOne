@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StudentDBTest {
 
-    @Test
+   /* @Test
     void studentequalsTrue(){
         Students studentone = new Students(001, "Klaus");
         Students studenttwo = new Students(002, "Hans");
@@ -21,5 +21,15 @@ class StudentDBTest {
 
         StudentDB studentDB = new StudentDB(students);
 
+    }*/
+
+    @Test
+
+    void IfNoStudentWithIdExistThrowException() {
+        //Given
+        StudentDB studentDB = new StudentDB();
+        //When
+        //Then
+        assertThrows(CouldNotFindStudentException.class, ()->   studentDB.findById(10));
     }
 }

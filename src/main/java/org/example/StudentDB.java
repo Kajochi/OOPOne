@@ -60,4 +60,12 @@ public class StudentDB {
 
     }
 
+    public Students findById(int id) throws CouldNotFindStudentException {
+       if (studentDB.containsKey(id)) {
+           return studentDB.get(id);
+       }
+        throw new CouldNotFindStudentException();
+
+    }
+
 }

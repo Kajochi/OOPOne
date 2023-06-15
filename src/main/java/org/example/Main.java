@@ -30,7 +30,7 @@ public class Main {
         studentDB.addStudent(studentsix);
         studentDB.addStudent(studentseven);
 
-
+/*
         System.out.println(studentDB);
         Students studenteight = new Students(8, "Franz");
         studentDB.addStudent(studenteight);
@@ -42,6 +42,11 @@ public class Main {
         studentDB.removeStudent(studentffour);
 
         System.out.println(studentDB);
+*/      try {
+            System.out.println(studentDB.findById(34));
+        }catch (CouldNotFindStudentException o){
+            System.out.println("Kein Student mit dieser Id vorhanden!");
+        }
 
 
     }
